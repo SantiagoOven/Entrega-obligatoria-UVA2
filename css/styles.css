@@ -359,6 +359,28 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
+#mensaje-container {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    display: none;
+}
+
+.mensaje-error {
+    background-color: #ffcccc;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+}
+
+.mensaje-exito {
+    background-color: #ccffcc;
+    color: #008000;
+    border: 1px solid #008000;
+}
+
+
 
 /* Responsividad */
 /* Max-width hace referencia al limite de px que va a ser cuando se apliquen estos estilos */
