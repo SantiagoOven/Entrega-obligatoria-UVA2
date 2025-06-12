@@ -1,0 +1,413 @@
+/*
+Paleta de colores:
+
+Azul Profundo	#00264d	Usado en el header y footer como fondo fuerte, transmite profesionalismo.
+Azul Medio	#173758	Usado como fondo de los enlaces de navegación. Buen contraste.
+Azul Suave	#336699	Usado en el botón "Enviar", da energía sin ser agresivo.
+Azul Oscuro Intenso	#003366	Hover del botón "Enviar", más serio y formal.
+Celeste Claro (hover)	#bcdcf8	Hover para links. Muy ligero y amistoso.
+Gris Claro	#f4f4f4	Color de fondo general, mantiene la página limpia.
+Blanco	#ffffff	Fondo del contenido y formularios. Espacios limpios y legibles.
+Gris Borde	#ccc	Borde de los inputs. Neutro, para no quitar atención.
+*/
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+/* Header */
+header {
+    background-color: #00264d;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+/* Navegación */
+nav {
+    background-color: #00264d;
+    padding: 10px 0;
+}
+
+/* estilos aplicados al nav con la clase nav-bar */
+nav ul.nav-bar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul.nav-bar li {
+    margin: 0 15px;
+}
+
+nav ul.nav-bar li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #173758;
+    border: 2px solid white;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* estilos aplicados al nav con la clase nav-bar cuando hace la accion hover con el mouse */
+nav ul.nav-bar li a:hover {
+    background-color: #bcdcf8;
+    color: rgb(0, 0, 0);
+    border-color: #ffffff;
+}
+
+/* Main */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #00264d;
+}
+
+/* Secciones */
+main section {
+    background-color: #f4f4f4;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* estilos aplicados al las sections que contengan h3 */
+main section h3 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #00264d;
+    color: white;
+}
+
+.table a {
+    color: #004b6e;
+    text-decoration: none;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Estilos aplicados a los elementos a dentro de la tabla y solo visible cuando el usuario hace hover con el mouse */
+.table a:hover {
+    text-decoration: underline;
+    color: #00264d;
+}
+
+/* Artículos */
+.materia {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+
+.materia h4 {
+    color: #336699;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* Lista de tareas */
+.tareas {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tareas li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+}
+
+/* Estilos aplicados al checkbox */
+.tareas input[type="checkbox"] {
+    transform: scale(1.2);
+    accent-color: #00264d;
+}
+
+.tareas a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #336699;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tareas a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #00264d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilos que afectan al cuadro de texto en el que el usuario ingresa informacion */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+/* Estilos aplicados solamente al boton con type= submit */
+button[type="submit"] {
+    background-color: #336699;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #003366;
+}
+
+.cronograma ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.recurso {
+    margin-top: 20px;
+}
+
+.descripcion img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+/* Contenedor principal */
+.materias-container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título principal */
+.materias-container h1 {
+    margin-bottom: 30px;
+}
+
+/* Grid de secciones */
+.materias-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* Caja genérica */
+.box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Secciones específicas */
+#examenes, #bibliografia {
+    height: auto;
+}
+
+#actividades {
+    grid-row: span 2;
+}
+
+/* Estilos de listas */
+.box ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.box ul li {
+    margin-bottom: 8px;
+}
+
+/* Enlaces */
+.box a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.box a:hover {
+    text-decoration: underline;
+}
+
+/* Subtítulos UVA */
+#actividades h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#actividades .actividad {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-left: 4px solid #3498db;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+#actividades .actividad:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#actividades .actividad h4 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+#actividades .actividad ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#actividades .actividad li {
+    margin: 0.2rem 0;
+}
+
+#actividades .actividad a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+#actividades .actividad a:hover {
+    text-decoration: underline;
+}
+
+#mensaje-container {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    display: none;
+}
+
+.mensaje-error {
+    background-color: #ffcccc;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+}
+
+.mensaje-exito {
+    background-color: #ccffcc;
+    color: #008000;
+    border: 1px solid #008000;
+}
+
+
+
+/* Responsividad */
+/* Max-width hace referencia al limite de px que va a ser cuando se apliquen estos estilos */
+/* Cuando los px de la pantalla sean menor a 768px, estos estilos se van a aplicar */
+@media screen and (max-width: 768px) {
+    nav ul.nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.nav-bar li {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    nav ul.nav-bar li a {
+        font-size: 16px;
+        padding: 12px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+
+    .table th, .table td {
+        padding: 10px;
+    }
+}
