@@ -359,25 +359,97 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
-#mensaje-container {
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    display: none;
+body.dark-mode main {
+    background-color: #121212 !important;
+    color: #f1f1f1 !important;
 }
 
-.mensaje-error {
-    background-color: #ffcccc;
-    color: #d8000c;
-    border: 1px solid #d8000c;
+body.dark-mode main section, body.dark-mode .materias-section, body.dark-mode .materia,
+body.dark-mode .box,
+body.dark-mode .actividad,
+body.dark-mode .materias-section,
+body.dark-mode .tarea-pendiente,
+body.dark-mode .sistemas-informacion,
+body.dark-mode .fundamentos-informatica,
+body.dark-mode .arquitectura-computadores {
+    background-color: #2a2a2a !important;
+    border-radius: 5px !important;
 }
 
-.mensaje-exito {
-    background-color: #ccffcc;
-    color: #008000;
-    border: 1px solid #008000;
+body.dark-mode main {
+    margin: 0 !important;
+    padding: 30px;
+    border-radius: 0 !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #cce4ff;
+}
+
+body.dark-mode input[type="checkbox"] {
+    accent-color: #cce4ff;
+}
+
+
+/* Entradas de formularios */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode textarea {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+/* Tablas */
+body.dark-mode .table th,
+body.dark-mode .table td {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #444;
+}
+
+/* Enlaces */
+body.dark-mode a {
+    color: #88bbff;
+}
+body.dark-mode a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Checkbox y texto en listas de tareas */
+body.dark-mode .tareas li {
+    color: #f1f1f1;
+}
+
+/* Imagen de perfil en modo oscuro (ligero brillo) */
+body.dark-mode img {
+    filter: brightness(1.1) contrast(1.05);
+}
+
+body.dark-mode footer {
+    margin-top: 0 !important;
+}
+
+
+/* Botón de modo */
+#toggle-mode {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: #336699;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#toggle-mode:hover {
+    background-color: #003366;
 }
 
 
@@ -405,6 +477,9 @@ button[type="submit"]:hover {
 
     .table {
         font-size: 14px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     .table th, .table td {

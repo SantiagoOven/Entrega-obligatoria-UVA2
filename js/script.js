@@ -46,3 +46,24 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("toggle-mode");
+
+    // Guardar preferencia del usuario
+    if (localStorage.getItem("modo") === "oscuro") {
+        document.body.classList.add("dark-mode");
+    }
+
+    toggleBtn.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        // Guardar preferencia
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("modo", "oscuro");
+        } else {
+            localStorage.setItem("modo", "claro");
+        }
+    });
+});
