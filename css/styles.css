@@ -377,9 +377,15 @@ body.dark-mode .arquitectura-computadores {
 }
 
 body.dark-mode main {
-    margin: 0 !important;
+    max-width: 1000px;
+    margin: 30px auto !important;
     padding: 30px;
     border-radius: 0 !important;
+    box-sizing: border-box;
+}
+
+body.dark-mode {
+    background-color: #121212;
 }
 
 body.dark-mode h1,
